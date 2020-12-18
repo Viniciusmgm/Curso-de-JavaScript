@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faixa Etária</title>
+    <style>
+        body{
+            background-color: black;
+            color: rgb(255, 2, 2);
+        }
+        h1{
+            font: normal 25pt Arial;
+        }
+        p{
+            font: normal 19pt Arial;
+        }
+        h2{
+            font: normal 19pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cálculo da Faixa Etária</h1>
+    <p>Com base nos dados apresentados seus resultados serão mostrados</p>
+    
+</body>
+<script>
+    var nome = window.prompt('Qual o seu nome?')
+    var idade = Number.parseInt(window.prompt('Qual a sua idade?')) 
+    var anos = 0 //anos necessários pra fazer 18 ou anos que ja passaram pós 18
+    document.writeln(`<h2>Seja Bem Vindo ${nome}.<br></h2>`)
+    if(idade<=12){
+        String(anos = 18 - idade)
+        document.write(`<h2>${nome}, você é uma criança, mas daqui a ${anos} anos você será adulto.<br></h2>`)
+        document.write('<h2>Aproveite esse tempo!</h2>')
+    }
+    if(idade>12 && idade<18){
+        String(anos = 18 - idade)
+        document.write(`<h2>${nome}, você é um adolescente, mas daqui a ${anos} anos você será adulto.<br></h2>`)
+        document.write('<h2>Aproveite bem esse tempo!</h2>')
+    }
+    if(idade >= 18){
+        String(anos = idade - 18)
+        document.write(`<h2>${nome}, você já é adulto, faz ${anos} anos que você fez 18 anos.<br></h2>`)
+        document.write('<h2>Você possui responsabilidades, mas tambem possui uma grande liberdade, aproveite isso!</h2>')
+    }  
+</script>
+</html>

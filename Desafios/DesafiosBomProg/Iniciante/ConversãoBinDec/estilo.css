@@ -1,0 +1,38 @@
+body{
+    background-color: indigo;
+    font: normal 15pt Arial;
+}
+header{
+    color: white;
+    text-align: center;
+}
+section{
+    background-color: white;
+    border-radius: 10px 30px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.185);
+    color: indigo;
+    font: bold 14pt Arial;
+    text-align: center;
+}
+footer{
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+input{
+    background-color: indigo;
+    color: white;
+    width: 170px;
+    height: 30px;
+    border-radius: 8px;
+    font: bold 11pt Arial;
+    margin-left: 6px;
+    text-align: center;
+}
+input#btn{
+    margin-top: 15px;
+    width: 145px;
+}

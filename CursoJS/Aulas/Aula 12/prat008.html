@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voto</title>
+    <style>
+        body{
+            background-color: indigo;
+            color: lightcoral;
+            font: normal 18pt Arial;
+        }
+        input#txn1{
+            background-color: black;
+            color: white;
+            width: 150px;
+            height: 30px;
+            text-align: center;
+            margin-left: 20px;
+            font: normal 14pt Arial;
+        }
+        input#btn{
+            background-color: lightcoral;
+            color: indigo;
+            width: 150px;
+            height: 30px;
+            text-align: center;
+            margin-left: 20px;
+            font: normal 14pt Arial;
+        }
+        div{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Idade para Votar e Dirijir</h1>
+    Qual é a sua idade? <input type="number" name="txn1" id="txn1">
+    <input type="button" value="Calcular" onclick="calcular()" id="btn">
+    <div id="res1"></div>
+</body>
+<script>
+    
+    var div = window.document.getElementById('res1')
+    
+    function calcular(){
+        var txn1 = window.document.getElementById('txn1')
+        var idade = Number(txn1.value)
+
+        if(idade < 16){
+
+            div.innerHTML = 'Você não pode nem dirigir, e nem votar.'
+
+        }else if(idade < 18 || idade >= 65){
+
+            switch(idade){
+               
+                case 16:
+                div.innerHTML = 'Você pode dirigir com autorização dos seus pais e, seu voto é opcional.'
+                break
+                
+                case 17:
+                div.innerHTML = 'Você pode dirigir com autorização dos seus pais e, seu voto é opcional.'
+                break
+
+                default:
+                div.innerHTML = 'Você pode dirigir e, seu voto é opcional.'
+                break
+
+            }
+        }else{
+
+            div.innerHTML = 'Você pode dirigir e, seu voto é obrigatório.'
+
+            }
+        }
+
+</script>
+</html>

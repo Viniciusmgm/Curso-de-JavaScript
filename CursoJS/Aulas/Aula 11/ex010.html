@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+    <style>
+        body{
+            background-color: deeppink;
+            color: honeydew;
+            font: normal 18pt Arial;
+            margin-top: 10px;
+        }
+        input#txtvel{
+            background-color: black;
+            color: white;
+            height: 30px;
+            width: 70px;
+        }
+        input#btn{
+            background-color: darkblue;
+            color: white;
+            height: 30px;
+            width: 60px;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Sistema de Trânsito</h1>
+    Velocidade do carro <input type="number" name="txtvel" id="txtvel"> km/h
+    <input type="button" value="Verificar" id="btn" onclick="verificar()" onmouseenter="entrar()" onmouseout="sair()">
+    <div id="res"></div>
+    <div id="msg"></div>
+    
+</body>
+<script>
+    
+    var btn = window.document.getElementById('btn')
+
+    function entrar(){
+        btn.style.backgroundColor = 'cyan'
+    }
+
+    function sair(){
+        btn.style.backgroundColor = 'darkblue'
+    }
+
+    function verificar(){
+        var txtvel = window.document.getElementById('txtvel') 
+        var vel = Number(txtvel.value)
+        var res = window.document.getElementById('res')
+        var msg = window.document.getElementById('msg')
+        if(vel > 60){
+            res.innerHTML = `Sua velocidade foi de ${vel.toFixed(1)}.`
+            msg.innerHTML = 'Você foi <strong>Multado</strong>'
+            
+        }else{
+            res.innerHTML = `Sua velocidade foi de ${vel.toFixed(1)}.`
+            msg.innerHTML = 'Continue assim'
+        }
+            
+
+    }
+</script>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body{
+            background-color: rgb(146, 4, 182);
+        }
+        h1{
+            color: white;
+            font: normal 30pt Arial;
+        }
+        input{
+            background-color: black;
+            color: white;
+            font: normal 20pt Arial;
+            height: 75px;
+            width: 75px;
+            line-height: 75px;
+            text-align: center;
+        }
+        input#res{
+            background-color: black;
+            color: white;
+            font: normal 52pt Arial;
+            height: 80px;
+            width: 309px;
+            line-height: 80px;
+            text-align: right;
+        }
+        input#ce{
+            background-color: black;
+            color: white;
+            font: normal 20pt Arial;
+            height: 75px;
+            width: 101.6px;
+            line-height: 75px;
+            text-align: center;
+        }
+        input#c{
+            background-color: black;
+            color: white;
+            font: normal 20pt Arial;
+            height: 75px;
+            width: 101.6px;
+            line-height: 75px;
+            text-align: center;
+        }
+        input#porc{
+            background-color: black;
+            color: white;
+            font: normal 20pt Arial;
+            height: 75px;
+            width: 101.6px;
+            line-height: 75px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <input type="number" name="res" id="res"><br>
+    <input type="button" value="%" id="porc">
+    <input type="button" value="CE" id="ce">
+    <input type="button" value="C" id="c"><br>
+    <input type="button" value="¹/x" id="fracao">
+    <input type="button" value="x²" id="poten">
+    <input type="button" value="Raiz" id="raiz">
+    <input type="button" value="/" id="div"><br>
+    <input type="button" value="1" id="b1">
+    <input type="button" value="2" id="b2">
+    <input type="button" value="3" id="b3">
+    <input type="button" value="X" id="multi"><br>
+    <input type="button" value="4" id="b4">
+    <input type="button" value="5" id="b5">
+    <input type="button" value="6" id="b6">
+    <input type="button" value="-" id="subt"><br>
+    <input type="button" value="7" id="b7">
+    <input type="button" value="8" id="b8">
+    <input type="button" value="9" id="b9">
+    <input type="button" value="+" id="soma"><br>
+    <input type="button" value="+/-" id="neg">
+    <input type="button" value="0" id="b0">
+    <input type="button" value="." id=".">
+    <input type="button" value="=" id="=">
+    
+    
+</body>
+<script>
+
+    var apaga = window.document.getElementById('c')
+    var res = window.document.getElementById('res')
+    var resul = String(res.value)
+    apaga.addEventListener('click', apagar)
+    function apagar(){
+        resul.innerText = '0'
+    }
+
+    //Voltar para terminar qnd tiver conhecimento para tal
+</script>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        h1{
+            font: normal 20pt Arial;
+            color: white;
+        }
+        body{
+            background-color: teal;
+            color: white;
+            font: normal 18pt Arial;
+        }
+        input#txtp{
+            background-color: black;
+            color: white;
+            font: normal 14pt Arial;
+            width: 150px;
+            height: 30px;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        input#ver{
+            background-color: black;
+            color: white;
+            font: normal 14pt Arial;
+            width: 125px;
+            height: 30px;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+        }
+        div{
+            font: normal 20pt Arial;
+            color: white;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    Onde você nasceu ? <br ><input type="text" name="txtp" id="txtp">
+    <input type="button" value="Verificar" id="ver">
+    <div id="div1"></div>
+    <div id="div2"></div>
+</body>
+<script>
+
+    var ver = window.document.getElementById('ver')
+    ver.addEventListener('click', verificar)
+    ver.addEventListener('mouseenter', entrar)
+    ver.addEventListener('mouseout', sair)
+
+    function verificar(){
+        var txtp = window.document.getElementById('txtp')
+        var p = String(txtp.value)
+        var div1 = window.document.getElementById('div1')
+        var div2 = window.document.getElementById('div2')
+        
+        if(p == "Brasil"){
+            div1.innerHTML = 'Você é Brasileiro'
+        }else{
+            div1.innerHTML = 'Você é Estrangeiro'
+            div2.innerHTML = `O ${p} parece legal`
+        }
+    }
+    function entrar(){
+        ver.style.backgroundColor = 'red'
+    }
+    function sair(){
+        ver.style.backgroundColor = 'black'
+    }
+
+</script>
+</html>

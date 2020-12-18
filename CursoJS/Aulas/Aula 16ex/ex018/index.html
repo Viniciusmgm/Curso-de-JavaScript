@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisando</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Analisador de Números</h1>
+    </header>
+    <section>
+        <p>
+            Selecione um número de 1 a 100: <input type="number" name="txtn" id="txtn">
+            <input type="button" value="Adicionar" id="btnA" onclick="adicionar()">
+        </p>
+        <select name="sel" id="sel"></select>
+        <input type="button" value="Finalizar" id="btnF" onclick="finalizar()">
+        <div id="msg">
+            <p></p>
+            <p id="p1"></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy;Vinizius33</p>
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>

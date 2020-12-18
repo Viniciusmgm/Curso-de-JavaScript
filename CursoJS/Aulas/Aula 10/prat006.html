@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média Escolar</title>
+    <style>
+        body{
+            background-color: rgb(118, 7, 161);
+            color: white;
+            font: normal 20pt Arial;
+        }
+        p{
+            font: normal 18pt Arial;
+        }
+        input{
+            background-color: black;
+            color: white;
+            font: normal 12pt Arial;
+            height: 35px;
+            width: 120px;
+            margin-left: 5px;
+            margin-top: 2px;
+            margin-bottom: 5px;
+            text-align: right;
+        }
+        input#calf{
+            width: 200px;
+            text-align: center;
+        }
+        div{
+            font: normal 15pt Arial;
+            margin-left: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cálculo da Média Escolar Anual</h1>
+    <p>Insira na sequência: Prova 1 / Prova 2 / Recuperação</p>
+
+    <input type="number" name="prova11" id="prova11" >
+    <input type="number" name="prova21" id="prova21" >
+    <input type="number" name="rec1" id="rec1" >
+    <input type="button" value="=" id="cal1" onclick="calculo1()">
+    <div id="div1">Sua média desse bimestre é: </div>
+
+    <input type="number" name="prova12" id="prova12" >
+    <input type="number" name="prova22" id="prova22" >
+    <input type="number" name="rec2" id="rec2" >
+    <input type="button" value="=" id="cal2" onclick="calculo2()">
+    <div id="div2">Sua média desse bimestre é: </div>
+
+    <input type="number" name="prova13" id="prova13" >
+    <input type="number" name="prova23" id="prova23" >
+    <input type="number" name="rec3" id="rec3" >
+    <input type="button" value="=" id="cal3" onclick="calculo3()">
+    <div id="div3">Sua média desse bimestre é: </div>
+
+    <input type="number" name="prova14" id="prova14" >
+    <input type="number" name="prova24" id="prova24" >
+    <input type="number" name="rec4" id="rec4" >
+    <input type="button" value="=" id="cal4" onclick="calculo4()">
+    <div id="div4"></div> <br>
+
+    <input type="button" value="Média Final" id="calf" onclick="calculof()">
+    <div id="divf">Sua média desse bimestre é: </div>
+</body>
+<script>
+
+    var div1 = window.document.getElementById('div1')
+    var div2 = window.document.getElementById('div2')
+    var div3 = window.document.getElementById('div3')
+    var div4 = window.document.getElementById('div4')
+    var divf = window.document.getElementById('divf')
+
+    function calculo1(){
+        var prova11 = window.document.getElementById('prova11')
+        var prova1b1 = Number(prova11.value)
+        var prova21 = window.document.getElementById('prova21')
+        var prova2b1 = Number(prova21.value)
+        var rec1 = window.document.getElementById('rec1')
+        var recup1 = Number(rec1.value)
+        var mediab1 = (prova1b1*2 + prova2b1*2 + recup1)/5
+        div1.innerHTML += (mediab1.toFixed(1)) 
+    }
+
+    function calculo2(){
+        var prova12 = window.document.getElementById('prova12')
+        var prova1b2 = Number(prova12.value)
+        var prova22 = window.document.getElementById('prova22')
+        var prova2b2 = Number(prova22.value)
+        var rec2 = window.document.getElementById('rec2')
+        var recup2 = Number(rec2.value)
+        var mediab2 = (prova1b2*2 + prova2b2*2 + recup2)/5
+        div2.innerHTML += (mediab2.toFixed(1))
+    }
+
+    function calculo3(){
+        var prova13 = window.document.getElementById('prova13')
+        var prova1b3 = Number(prova13.value)
+        var prova23 = window.document.getElementById('prova23')
+        var prova2b3 = Number(prova23.value)
+        var rec3 = window.document.getElementById('rec3')
+        var recup3 = Number(rec3.value)
+        var mediab3 = (prova1b3*2 + prova2b3*2 + recup3)/5
+        div3.innerHTML += (mediab3.toFixed(1))
+    }
+
+    function calculo4(){
+        var prova14 = window.document.getElementById('prova14')
+        var prova1b4 = Number(prova14.value)
+        var prova24 = window.document.getElementById('prova24')
+        var prova2b4 = Number(prova24.value)
+        var rec4 = window.document.getElementById('rec4')
+        var recup4 = Number(rec4.value)
+        var mediab4 = (prova1b4*2 + prova2b4*2 + recup4)/5
+        div4.innerHTML += (mediab4.toFixed(1))
+    }
+
+    function calculof(){
+        var prova11 = window.document.getElementById('prova11')
+        var prova1b1 = Number(prova11.value)
+        var prova21 = window.document.getElementById('prova21')
+        var prova2b1 = Number(prova21.value)
+        var rec1 = window.document.getElementById('rec1')
+        var recup1 = Number(rec1.value)
+        var mediab1 = (prova1b1*2 + prova2b1*2 + recup1)/5
+
+        var prova12 = window.document.getElementById('prova12')
+        var prova1b2 = Number(prova12.value)
+        var prova22 = window.document.getElementById('prova22')
+        var prova2b2 = Number(prova22.value)
+        var rec2 = window.document.getElementById('rec2')
+        var recup2 = Number(rec2.value)
+        var mediab2 = (prova1b2*2 + prova2b2*2 + recup2)/5
+
+        var prova13 = window.document.getElementById('prova13')
+        var prova1b3 = Number(prova13.value)
+        var prova23 = window.document.getElementById('prova23')
+        var prova2b3 = Number(prova23.value)
+        var rec3 = window.document.getElementById('rec3')
+        var recup3 = Number(rec3.value)
+        var mediab3 = (prova1b3*2 + prova2b3*2 + recup3)/5
+
+        var prova14 = window.document.getElementById('prova14')
+        var prova1b4 = Number(prova14.value)
+        var prova24 = window.document.getElementById('prova24')
+        var prova2b4 = Number(prova24.value)
+        var rec4 = window.document.getElementById('rec4')
+        var recup4 = Number(rec4.value)
+        var mediab4 = (prova1b4*2 + prova2b4*2 + recup4)/5
+
+        var mediaf = (mediab1 + mediab2*2 + mediab3*3 + mediab4*3)/9
+        var res = mediaf > 6.0 ? "Aprovado" : "Reprovado"
+        divf.innerHTML = `Sua Média Final é: ${mediaf.toFixed(1)}. Você foi ${res}`
+    }
+
+
+</script>
+</html>

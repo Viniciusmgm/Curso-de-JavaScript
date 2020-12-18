@@ -1,0 +1,23 @@
+body{
+    background-color: black;
+    color: white;
+}
+header{ 
+    font: bold 15pt Arial;
+    position: relative;
+    text-align: center;
+}
+section{
+    width: 700px;
+    height: 400px;
+    margin: auto;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.568);
+    text-align: center;
+    background-image: url("_imagens/imgdaborda.jpg");
+}
+footer{
+    font: italic 11pt Arial;
+    text-align: center;
+    position: relative;
+    margin-top: 100px;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de IMC</title>
+    <style>
+        body{
+            background-color: rgb(60, 1, 83);
+            color: white;
+            font: normal 18pt Arial;
+        }
+        h1{
+            font: normal 24pt Arial;
+        }
+        p{
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculo do Indice de Massa Corporea</h1>
+    <p>Veja a relação de IMC:</p>
+    <p>Peso Abaixo do Normal ==> Menos de 18.5</p>
+    <p>Peso Normal ==> de 18.5 a 24.9</p>
+    <p>Sobrepeso ==> de 25.0 a 29.9</p>
+    <p>Obesidade Grau I ==> de 30.0 a 34.9</p>
+    <p>Obesidade Grau II ==> de 35.0 a 39.9</p>
+    <p>Obesidade Grau III ==> 40.0 e acima</p>
+    
+</body>
+<script>
+    var nome = window.prompt('Qual o seu nome?')
+    var alt = Number(window.prompt('Qual é a sua altura?'))
+    var peso = Number(window.prompt('Qual é o seu peso?'))
+    window.confirm('Se todos os dados foram colocados corretamente, clique em OK')
+    var imc = peso / alt**alt
+    var situacao = (imc < 18.5 ? "Peso Abaixo do Normal" : (imc < 25.0 ? "Peso Normal" : (imc < 30.0 ? "Sobrepeso" : (imc < 35.0 ? "Obesidade Grau I" : (imc < 40.0 ? "Obesidade Grau II" : "Obesidade Grau III") ))))    
+    document.writeln(`Olá ${nome}.<br> Seu Indice de Massa Corporea é : ${imc.toFixed(1)}.<br>`)
+    document.writeln(`Você está com <strong>${situacao}</strong>.`)
+</script>
+</html>
