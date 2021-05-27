@@ -1,6 +1,6 @@
 <!--Apresentação do curso-->
 
-<h1 align="center">Curso de JavaScript</h1>
+<h1 align="center">Curso de JavaScript <img align="top" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/></h1>
 <p>
   Projeto e exercícios realizados durante o Curso de JavaScript do <a href="https://www.cursoemvideo.com/">Curso em Video</a> <br>
 </p>
